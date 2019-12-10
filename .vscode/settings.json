@@ -1,0 +1,22 @@
+{
+    "liveServer.settings.port": 5501,
+
+    "liveSassCompile.settings.generateMap":false,
+    "liveSassCompile.settings.includeItems": [
+        "~/scss/home.scss",
+        "~/scss/news.scss",
+    ],
+    "liveSassCompile.settings.autoprefix": [
+        "> 1%",
+        "last 2 versions"
+    ],
+    "liveSassCompile.settings.formats":[
+        // This is Default.
+        {
+            "format": "expanded",
+            "extensionName": ".css",
+            "savePath": null
+        },
+    ],
+    //add only scss file
+}
