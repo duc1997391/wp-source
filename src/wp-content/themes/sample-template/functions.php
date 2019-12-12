@@ -39,11 +39,13 @@ function add_style() {
     wp_enqueue_style('font', THEME_URI. '/assets/css/font.css');
     wp_enqueue_style('font-awesome5', THEME_URI. '/assets/fonts/fontawesome/css/all.css');
     wp_enqueue_style('bootstrap', THEME_URI. '/assets/css/bootstrap.css');
+    wp_enqueue_style('slick', THEME_URI. '/assets/css/slick.css');
     wp_enqueue_style('main', THEME_URI. '/assets/css/main.css');
 
 	wp_enqueue_script( 'jquery', 'https://code.jquery.com/jquery-3.4.1.js', '','' , true);
     wp_enqueue_script( 'bootstrap', THEME_URI. '/assets/js/bootstrap.min.js', '','' , true);
     wp_enqueue_script( 'ajax', THEME_URI. '/assets/js/ajax.js', '','' , true);
+    wp_enqueue_script( 'slick', THEME_URI. '/assets/js/slick.min.js', '','' , true);
     wp_enqueue_script( 'main', THEME_URI. '/assets/js/main.js', '','' , true);
     
     wp_localize_script('ajax', 'ajaxData', array('url' => admin_url('admin-ajax.php')));
