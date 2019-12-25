@@ -7,6 +7,7 @@ function nt_create_post_type($args) {
     $single = $args['single'];
     $slug = $args['slug'];
     $icon = $args['menu_icon'];
+    $supports = $args['supports'];
 
     register_post_type($post_type, array(
         'labels' => array(
@@ -31,7 +32,7 @@ function nt_create_post_type($args) {
         'has_archive' => false,
         'taxonomies' => array($post_type),
         'rewrite' => array('slug' => $slug),
-        'supports' => array('title', 'editor', 'excerpt', 'revisions', 'thumbnail', 'author')
+        'supports' =>  $supports,
     ));
 }
 function nt_create_taxonomy($args) {
@@ -90,23 +91,24 @@ function nt_create_taxonomy($args) {
 
 function create_new_custom_post_type_and_taxonomy(){
 
-    // Post type service
+    // Post type sample
     // $args = array(
-    //     "post_type" => 'service',
-    //     "name" => "Service",
-    //     "single" => "Service",
-    //     "slug" => "service",
+    //     "post_type" => 'sample',
+    //     "name" => "Sample",
+    //     "single" => "Sample",
+    //     "slug" => "sample",
     //     'menu_icon' => 'dashicons-admin-comments',
+    //     'supports' =>  array('title', 'editor', 'excerpt', 'revisions', 'thumbnail', 'author'),  
     // );
     // nt_create_post_type($args);
 
-    //taxonomy
+    // taxonomy sample
     // $args = array(
-    //     "post_type" => array('service'),
+    //     "post_type" => array('sample'),
     //     "name" => "Categories",
     //     "single" => "Categories",
-    //     "slug" => "categories_work",
-    //     "taxonomy" => "categories_work",
+    //     "slug" => "categories_sample",
+    //     "taxonomy" => "categories_sample",
     // );
     // nt_create_taxonomy($args);
 }
